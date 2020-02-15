@@ -1,1 +1,1 @@
-https://timurkalimullin.github.io/singolo
+https://timurkalimullin.github.io/singolo/singolo1.html
