@@ -47,21 +47,21 @@ header a:hover {
 .header__nav {
     display: inline-block;
     position: absolute;
-    right:40px;
-    top: 45px;
+    right: 57px;
+    top: 43px;
     font-size: 12px;
     color: #494e62;
 }
 
 .header__nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 371px;
     list-style: none;
 }
 
 .header__nav  li {
-    margin: 0 16px;
+    margin: 0px 15px;;
     position: relative;
 }
 
@@ -149,7 +149,7 @@ header a:hover {
 }
 
 .services__block_container {
-    margin: 44px 20px 0px 40px;
+    margin: 46px 20px 0px 40px;
     display: flex;
     flex-wrap: wrap;
 
@@ -158,8 +158,8 @@ header a:hover {
 .services__block {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
-    margin-right: 20px;
+    margin-bottom: 37px;
+    margin-right: 21px;
     width: 299px;
     height: 86px;
 }
