@@ -1,1 +1,2 @@
-https://timurkalimullin.github.io/singolo/singolo1.html
+
+Singolo Layout
