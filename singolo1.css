@@ -36,7 +36,7 @@ header a:hover {
     display: inline-block;
     margin-top: 34px;
     margin-left: 40px;
-    font-size: 25px;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ header a:hover {
 .header__nav ul {
     display: flex;
     justify-content: space-between;
-    width: 371px;
+    width: 372px;
     list-style: none;
 }
 
@@ -149,7 +149,7 @@ header a:hover {
 }
 
 .services__block_container {
-    margin: 46px 20px 0px 40px;
+    margin: 46px 0px 0px 40px;
     display: flex;
     flex-wrap: wrap;
 
@@ -196,5 +196,5 @@ header a:hover {
     font-family: Lato;
     font-size: 12px;
     line-height: 21.56px;
-    margin-top: 9px;
+    margin-top: 11px;
 }
