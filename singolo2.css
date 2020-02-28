@@ -14,8 +14,13 @@
 }
 
 .portfolio {
+<<<<<<< HEAD
     height: 879px;
     padding: 80px 40px 73px 40px;
+=======
+    height: 870px;
+    padding: 74px 0 73px 0;
+>>>>>>> master
     background-color: #2d303a;
     border-bottom: 6px solid #323746;;
 }
@@ -29,7 +34,11 @@
 }
 
 .portfolio__subtitle {
+<<<<<<< HEAD
     margin-top: 29px;
+=======
+    margin-top: 25px;
+>>>>>>> master
     font-family: "LatoLight";
     color: #767e9e;
     font-size: 18px;
@@ -122,7 +131,11 @@
 
 .about-us__card {
     width: 300px;
+<<<<<<< HEAD
     margin-right: 19px;
+=======
+    margin-right: 20px;
+>>>>>>> master
 }
 
 .about-us__card_title {
