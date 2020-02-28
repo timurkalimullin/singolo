@@ -92,10 +92,51 @@ header a:hover {
     position: relative;
 }
 
-.phone_2 {
-    height: 215px;
-    margin-left: 73px;
-    margin-top: 121px;
+.slider .phone_1 {
+    position: relative;
+}
+
+.slider .phone_vertical {
+    position: absolute;
+    z-index: 2;
+}
+
+.slider .screen_vertical {
+    position: absolute;
+    left: 14px;
+    top: 65px;
+    z-index: 3;
+}
+
+.slider .shadow {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+}
+
+.slider .phone_2 {
+    position: relative;
+    margin-left: 436px;
+    margin-top: 0px;
+}
+.slider .phone_horizontal {
+    position: absolute;
+    z-index: 2;
+    transform: rotateZ(90deg);
+}
+
+.slider .screen_horizontal {
+    position: absolute;
+    z-index: 3;
+    top: 135px;
+    left: -62px;
+}
+
+.slider .shadow_horizontal {
+    position: absolute;
+    left: -122px;
+    z-index: 1;
+    top: 121px;
 }
 
 .prev {
