@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-https://timurkalimullin.github.io/singolo/singolo1.html
 
-https://timurkalimullin.github.io/singolo/singolo2.html
-=======
+https://timurkalimullin.github.io/singolo/index.html
 
-Singolo Layout
->>>>>>> master
