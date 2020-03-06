@@ -96,7 +96,38 @@ header a:hover {
 }
 
 .slider .phone_1 {
+
     position: relative;
+}
+
+.slider .phone_vertical {
+    position: absolute;
+    z-index: 2;
+}
+
+.slider .screen_vertical {
+    position: absolute;
+    left: 14px;
+    top: 65px;
+    z-index: 3;
+}
+
+.slider .shadow {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+}
+
+.slider .phone_2 {
+
+    position: relative;
+    margin-left: 436px;
+    margin-top: 0px;
+}
+.slider .phone_horizontal {
+    position: absolute;
+    z-index: 2;
+    transform: rotateZ(90deg);
 }
 
 .slider .phone_vertical {
@@ -127,6 +158,7 @@ header a:hover {
     z-index: 2;
     transform: rotateZ(90deg);
 }
+
 
 .slider .screen_horizontal {
     position: absolute;
@@ -581,8 +613,21 @@ background-color: #2d303a;
 footer .copy {
     position: absolute;
     left:42px;
-    top: 30px;
+    top: 28px;
 }
+
+footer .copy a {
+    font-family: 'Lato';
+    text-decoration: none;
+    color:#666D89;
+    font-size: 12px;
+}
+
+footer .copy a::before {
+    content: '©';
+    margin-right: 2px;
+}
+
 
 footer .social__media {
     position: absolute;
@@ -590,7 +635,7 @@ footer .social__media {
     justify-content: space-between;
     width: 152px;
     height: 32px;
-    left: 81%;
+    left: 81.2%;
     top: 21px;
 }
 
@@ -615,3 +660,4 @@ footer .social__media a:hover, footer .social__media a:focus {
     transform: scale(1.2,1.2);
     border-color: #caceda;
 }
+
