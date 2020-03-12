@@ -7,23 +7,23 @@
     <title>Singolo</title>
 </head>
 <body>
-<header>
+<header id="header">
     <div class="container">
         <div class="header__logo"><a href="#">singolo</a><span>*</span></div>
 
         <nav class="header__nav">
             <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a class="active" href="#slider">home</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about-us">about</a></li>
+                <li><a href="#forms">contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<section class="slider">
+<section class="slider" id = "slider">
    
     <div class="container">
         <div class="prev">
@@ -47,7 +47,7 @@
     </div>
 </section>
 
-<section class="services">
+<section class="services" id ="services">
     <div class="container">
         <div class="services__descr">
             <h1>Our Services</h1>
@@ -101,17 +101,17 @@
     </div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id ="portfolio">
     <div class="container">
         <h2 class="portfolio__title">Portfolio</h2>
         <p class="portfolio__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
         <nav class="portfolio__nav">
             <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Graphic Design</a></li>
-                <li><a href="#">Artwork</a></li>
+                <li class="active">All</li>
+                <li>Web Design</li>
+                <li>Graphic Design</li>
+                <li>Artwork</li>
             </ul>
         </nav>
 
@@ -134,7 +134,7 @@
     </div>
 </section>
 
-<section class="about-us">
+<section class="about-us" id="about-us">
     <div class="container">
         <h2 class="about-us__title">About Us</h2>
         <p class="about-us__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -177,19 +177,19 @@
     </div>
 </section>
 
-<section class="forms">
+<section class="forms" id="forms">
     <div class="container">
         <h2 class="forms__title">Get a Quote</h2>
         <p class="forms__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
     
 
     <div class="forms__input_wrapper">
-        <form action="">
+        <form action="" id='formSingolo'>
             <input type="text" name="name_input" id="name_input" placeholder="Name (Required)" required>
             <input type="email" name="email_input" id="email_input" placeholder="Email (Required)" required>
             <input type="text" name="subject_input" id="subject_input" placeholder="Subject">
             <textarea name="project_description" id="project_description" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" id="formSubmit">Send</button>
         </form>
 
         <div class="forms__contacts_wrapper">
@@ -223,5 +223,20 @@
         </div>
     </div>
 </footer>
+
+<div class="modal" id="modal">
+    <div class="message" id="message">
+        <div class="modal__wrapper">
+            <p>Письмо отправлено</p>
+            <p id="modalSubj">Без темы</p>
+            <p id="modalDescr">Без описания</p>
+        </div>
+        <button id="modalBtn">OK</button>
+    </div>
+
+
+</div>
 </body>
+<script src="script.js"></script>
 </html>
+
