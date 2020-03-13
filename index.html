@@ -26,23 +26,34 @@
 <section class="slider" id = "slider">
    
     <div class="container">
-        <div class="prev">
-            <img src="assets/img/prev.png" alt="">
+        <div class="prev" id="left">
+            <img src="assets/img/arrow-left.svg" alt="">
         </div>
-        <div class="slider__wrapper">
-            <div class="phone_1">
-                <img src="assets/img/phone-base.png" alt="vertical_phone" class="phone_vertical">
-                <img src="assets/img/screen-vertical.png" alt="" class="screen_vertical">
-                <img src="assets/img/Shadow.png" alt="" class="shadow">
+            <div class="slider__wrapper">
+                <div class="slide active" >
+                    <div class="phone">
+                        <div class="phone_1">
+                           <img class="phone_body phone-body_vertical" src="assets/img/phone-vertical.svg" alt="phone-elemnt">
+                           <img class="shadow shadow_vertical" src="assets/img/phone-vertical-shadow.png" alt="phone-elemnt">
+                           <img class="screen screen_vertical" src="assets/img/screen-vertical.png" alt="phone-elemnt">
+                        </div>
+                        
+                        <div class="phone_2">
+                            <img class="phone_body phone-body_horizontal" src="assets/img/phone-horizontal.svg" alt="phone-elemnt">
+                            <img class="shadow shadow_horizontal" src="assets/img/phone-horizontal-shadow.png" alt="phone-elemnt">
+                            <img class="screen screen_horizontal" src="assets/img/screen-horizontal.png" alt="phone-elemnt">
+                        </div>
+                    </div>    
+                </div>
+        
+                <div class="slide">
+                    <div class="phone">
+                        <img src="assets/img/Group.png" class="phone_group-2" alt="phone-base">
+                    </div>
+                </div>
             </div>
-            <div class="phone_2">
-                <img src="assets/img/phone-base.png" alt="horizontal_phone" class="phone_horizontal">
-                <img src="assets/img/screen-horizontal.png" alt="" class="screen_horizontal">
-                <img src="assets/img/Shadow-hor.png" alt="" class="shadow_horizontal">
-            </div>
-        </div>
-        <div class="next">
-            <img src="assets/img/next.png" alt="">
+        <div class="next" id="right">
+            <img src="assets/img/arrow-right.svg" alt="">
         </div>
     </div>
 </section>
@@ -142,8 +153,8 @@
         <div class="about-us__card__wrapper">
             <div class="about-us__card">
                 <img src="assets/img/photo-1.png" alt="card-photo">
-                <div class="about-us__card_title">Adam Jensen</div>
-                <div class="about-us__card_subtitle">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</div>
+                <div class="about-us__card_title text-ellip">Adam Jensen</div>
+                <div class="about-us__card_subtitle ">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</div>
                 <div class="about-us__card__soc">
                     <a href="#"><img src="assets/img/facebook.png" alt="social-media_icon"></a>
                     <a href="#"><img src="assets/img/google+.png" alt="social-media_icon"></a>
@@ -153,8 +164,8 @@
             </div>
             <div class="about-us__card">
                 <img src="assets/img/photo-2.png" alt="card-photo">
-                <div class="about-us__card_title">Desmond Miles</div>
-                <div class="about-us__card_subtitle">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</div>
+                <div class="about-us__card_title text-ellip">Desmond Miles</div>
+                <div class="about-us__card_subtitle ">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</div>
                 <div class="about-us__card__soc">
                     <a href="#"><img src="assets/img/facebook.png" alt="social-media_icon"></a>
                     <a href="#"><img src="assets/img/google+.png" alt="social-media_icon"></a>
@@ -164,8 +175,8 @@
             </div>
             <div class="about-us__card">
                 <img src="assets/img/photo-3.png" alt="card-photo">
-                <div class="about-us__card_title">Scolara Visari</div>
-                <div class="about-us__card_subtitle">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</div>
+                <div class="about-us__card_title text-ellip">Scolara Visari</div>
+                <div class="about-us__card_subtitle ">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</div>
                 <div class="about-us__card__soc">
                     <a href="#"><img src="assets/img/facebook.png" alt="social-media_icon"></a>
                     <a href="#"><img src="assets/img/google+.png" alt="social-media_icon"></a>
@@ -187,8 +198,8 @@
         <form action="" id='formSingolo'>
             <input type="text" name="name_input" id="name_input" placeholder="Name (Required)" required>
             <input type="email" name="email_input" id="email_input" placeholder="Email (Required)" required>
-            <input type="text" name="subject_input" id="subject_input" placeholder="Subject">
-            <textarea name="project_description" id="project_description" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+            <input type="text" name="subject_input" id="subject_input" placeholder="Subject" maxlength="60">
+            <textarea name="project_description" id="project_description" cols="30" rows="10" placeholder="Describe your project in detail..." maxlength="240"></textarea>
             <button type="submit" id="formSubmit">Send</button>
         </form>
 
@@ -213,7 +224,7 @@
 
 <footer>
     <div class="container">
-        <div class="copy"><a href="#">Copyright2013</a></div>
+        <div class="copy"><a href="#">© Copyright2013</a></div>
 
         <div class="social__media">
             <a href="#"><img src="assets/img/facebook.png" alt="social-media_icon"></a>
