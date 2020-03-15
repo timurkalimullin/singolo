@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+img {
+    user-select: none;
+}
+
 .container {
     position: relative;
     max-width: 1020px;
@@ -736,7 +740,7 @@ footer .social__media a:hover, footer .social__media a:focus {
     height: 100vh;
     position: fixed;
     top:0;
-    z-index: 10;
+    z-index: 30;
 }
 
 
@@ -744,18 +748,17 @@ footer .social__media a:hover, footer .social__media a:focus {
 .modal .message {
     position: relative;
     width: 400px;
-    height: 350px;
+    padding: 15px;
     background-color: #fff;
-    top: 40%;
+    top: 20%;
     left:50%;
     transform: translateX(-50%);
 }
 
 .modal__wrapper {
-    position: absolute;
-    top:20%;
-    left:50%;
+    position: relative;
     width: 100%;
+    left:50%;
     transform: translateX(-50%);
     padding: 20px;
     text-align: center;
@@ -766,7 +769,7 @@ footer .social__media a:hover, footer .social__media a:focus {
 }
 
 .modal #modalBtn {
-    position: absolute;
+    position: relative;
     cursor: pointer;
     left: 50%;
     top:80%;
