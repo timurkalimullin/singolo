@@ -1,14 +1,10 @@
 const operations = {
     anchors: ()=>{
-        const navLinks = document.querySelector('.header__nav').querySelectorAll('a[href^="#"]');
+        const navLinks = document.querySelectorAll('.header__nav ul a');
         navLinks.forEach(item=>{
             item.addEventListener('click', function(e) {
                 e.preventDefault();
-                navLinks.forEach(el=>{
-                    el.classList.remove('active');
-                })
-                item.classList.add('active')
-
+                
                 let destination = item.getAttribute('href').replace(/\#/, '');
                 destination = document.getElementById(destination).offsetTop - 95;
 
@@ -18,6 +14,31 @@ const operations = {
         })
     },
 
+    scroll: ()=>{
+        window.addEventListener('scroll', (e)=>{
+            let currenPos = pageYOffset,
+                sections = document.querySelectorAll('section'),
+                navLinks = document.querySelectorAll('.header__nav ul a');
+        
+            sections.forEach(el=>{
+                if (currenPos>=-95+el.offsetTop && currenPos<=(el.offsetTop+el.offsetHeight-95)) {
+                    navLinks.forEach(link=>{
+                        link.classList.remove('active');
+                        let actLink = '#' + el.getAttribute('id');
+                        if (link.getAttribute('href')==actLink) {
+                            link.classList.add('active');
+                        } else  if (currenPos>=2600) {
+                            navLinks.forEach(el=>{
+                                el.classList.remove('active')
+                            })
+                            document.querySelector('#end').classList.add('active')
+                        }
+                    }) 
+                }
+            })
+        })
+    },
+    
     portfolio: ()=> {
         const portfolioTabs = document.querySelectorAll('.portfolio__nav ul li');
         let cards = document.querySelectorAll('.portfolio__img__wrapper ul li');
@@ -25,7 +46,6 @@ const operations = {
         portfolioTabs.forEach(item=>{
                 item.addEventListener('click', function(e){
                     if (item.className !=='active') {
-                        e.preventDefault;
 
                         portfolioTabs.forEach(el=>{
                             el.classList.remove('active');
@@ -161,7 +181,6 @@ const operations = {
         let phone = document.querySelectorAll('.phone_body');
         phone.forEach((el,i)=>{
             el.addEventListener('click', function(event){
-                console.log(this)
                 event.target.parentElement.querySelector('.screen').classList.toggle('hide')
             })
         })
@@ -169,11 +188,10 @@ const operations = {
 }
 
 operations.anchors();
+operations.scroll();
 operations.portfolio();
 operations.modal();
 operations.slider();
 operations.screenToggle();
-
-
 
 

@@ -94,6 +94,7 @@ header .active {
     color:#494e62;
     position: absolute;
     right: -16px;
+    bottom: 0px;
 }
 
 .header__nav  li:last-child::after {
