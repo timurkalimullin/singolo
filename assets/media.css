@@ -1,9 +1,18 @@
+@media (max-width: 1019px) {
+    .portfolio {
+        max-height: 1102px;
+    }
+}
 
 @media (max-width: 767px) {
     .container {
         margin: 0 auto;
         padding: 0 20px;
     }
+
+    section, footer {
+        top: 71px;
+    } 
 
     header {
         height: 71px;
@@ -80,4 +89,5 @@
         height: 100%;
         width: 3.4px;
     }
+
 }
