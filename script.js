@@ -27,7 +27,7 @@ const operations = {
                         let actLink = '#' + el.getAttribute('id');
                         if (link.getAttribute('href')==actLink) {
                             link.classList.add('active');
-                        } else  if (currenPos>=2600) {
+                        } else  if (currenPos>=2559) {
                             navLinks.forEach(el=>{
                                 el.classList.remove('active')
                             })
@@ -184,6 +184,23 @@ const operations = {
                 event.target.parentElement.querySelector('.screen').classList.toggle('hide')
             })
         })
+    },
+
+    burgerModal: ()=>{
+        let burger = document.querySelector('#header__burger'),
+        headerModal= document.querySelector('#header__modal');
+
+        burger.addEventListener('click', (e)=>{
+            burger.classList.toggle('active');
+            headerModal.classList.toggle('active')
+        })
+
+        window.addEventListener('resize', (e)=>{
+            if (document.body.clientWidth > 767) {
+                headerModal.classList.remove('active');
+                burger.classList.remove('active');
+            }
+        })
     }
 }
 
@@ -193,5 +210,6 @@ operations.portfolio();
 operations.modal();
 operations.slider();
 operations.screenToggle();
+operations.burgerModal();
 
 
