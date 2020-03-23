@@ -1,13 +1,21 @@
+
+
 @media (max-width: 1019px) {
-    .portfolio {
-        max-height: 1102px;
+
+
+    .slider {
+        height:100%;
+    }
+
+    .portfolio__img__wrapper ul li {
+        flex: 1 0 25%;
     }
 }
 
 @media (max-width: 767px) {
     .container {
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     section, footer {
@@ -55,6 +63,8 @@
     }
 
     .header__modal .header__logo {
+        position: relative;
+        z-index: 33;
         margin-left: 73px;
         margin-top: 27px;
         font-family: "Lato";
@@ -73,6 +83,8 @@
         flex-direction: column;
         justify-content: space-between;
         z-index: 33;
+        transition: 0.5s all;
+        cursor: pointer;
     }
 
     .header__burger>div {
@@ -83,11 +95,86 @@
     }
 
     .header__burger.active{
-        flex-direction: row;
-    }
-    .header__burger.active>div{
-        height: 100%;
-        width: 3.4px;
+        transform: rotateZ(270deg);
     }
 
+    .services__block {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .services__block_icon {
+        margin-right: 20px;
+    }
+
+    .services__block__wrapper {
+        width: 70%;
+    }
+
+    .portfolio {
+        max-height: auto;
+        padding: 40px 0;
+    }
+
+    .portfolio__img__wrapper {
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+    }
+
+    .portfolio__img__wrapper ul li {
+       flex:1 0 40%;
+       margin: 7.5px;
+    }
+
+    .portfolio__img__wrapper ul li img {
+        width: 100%;
+    }
+
+    .portfolio .marked {
+        display: none;
+    }
+
+    .about-us {
+        padding: 40px 0;
+    }
+
+    .about-us__card__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .about-us__card__wrapper .about-us__card {
+        width: 100%;
+    }
+
+    .forms__input_wrapper {
+        flex-wrap: wrap;
+    }
+
+    .forms__input_wrapper form {
+        width: 100%;
+    }
+
+    .forms__contacts_wrapper {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .forms__input_wrapper form button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .forms__input_wrapper form button:hover {
+        border: 2px solid white;
+        transform: scale(1,1);
+    }
+
+    footer .copy {
+        display: none;
+    }
+
+    footer .social__media {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

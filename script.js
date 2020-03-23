@@ -64,10 +64,14 @@ const operations = {
 
         cards.forEach(item=>{
             item.addEventListener('click', (e)=>{
-                cards.forEach(el=>{
-                    el.classList.remove('select');
-                })
-                item.classList.add('select')
+                if (item.className.includes('select')) {
+                    item.classList.toggle('select')
+                } else {
+                    cards.forEach(el=>{
+                        el.classList.remove('select');
+                        item.classList.add('select');
+                    })
+                }
             })
         })
     },
@@ -91,15 +95,15 @@ const operations = {
             }
 
             if (subject.value) {
-                document.getElementById('modalSubj').innerHTML = `Тема: ${subject.value}`;
+                document.getElementById('modalSubj').textContent = `Тема: ${subject.value}`;
             } else if (subject.value.toLowerCase() == '') {
-                document.getElementById('modalSubj').innerHTML = 'Без темы'
+                document.getElementById('modalSubj').textContent = 'Без темы';
             }
             
             if (descr.value) {
-                document.getElementById('modalDescr').innerHTML = `Описание: ${descr.value}`;
+                document.getElementById('modalDescr').textContent = `Описание: ${descr.value}`;
             } else if (descr.value.toLowerCase() == '') {
-                document.getElementById('modalDescr').innerHTML = 'Без описания'
+                document.getElementById('modalDescr').textContent = 'Без описания';
             }
             
 
@@ -193,6 +197,13 @@ const operations = {
         burger.addEventListener('click', (e)=>{
             burger.classList.toggle('active');
             headerModal.classList.toggle('active')
+        })
+
+        document.querySelectorAll('.header__nav ul a').forEach(el=>{
+            el.addEventListener('click', ()=>{
+                burger.classList.remove('active');
+                headerModal.classList.remove('active')
+            })
         })
 
         window.addEventListener('resize', (e)=>{
